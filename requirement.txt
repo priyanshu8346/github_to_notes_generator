@@ -1,0 +1,6 @@
+markdown2
+weasyprint
+PuMyPDF
+pygments
+dotenv 
+requests

@@ -1,0 +1,26 @@
+# === Python cache and compiled files ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === Virtual environment ===
+venv/
+.env/
+
+# === Mac system files ===
+.DS_Store
+
+# === VS Code settings (optional) ===
+.vscode/
+
+# === PDF output ===
+LectureNotes.pdf
+
+# === Temporary or log files ===
+*.log
+*.tmp
+*.bak
+
+# === Environment and secrets ===
+.env
