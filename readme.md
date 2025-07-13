@@ -1,8 +1,6 @@
 
 
-markdown
-Copy
-Edit
+
 # 📝 GitHub Lecture Notes to PDF Converter
 
 This Python script automates the process of downloading notes (`.md`, `.cpp`, `.txt` files) from specific folders in a public GitHub repository and combines them into a single, well-formatted, syntax-highlighted PDF file.
