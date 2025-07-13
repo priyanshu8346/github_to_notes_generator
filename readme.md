@@ -20,13 +20,13 @@ Perfect for converting structured lecture notes from a GitHub repo into a clean,
 ---
 
 ## 📁 Folder Structure
-
+```
 ├── app.py # Main Python script
 ├── .env # Config and secret token (excluded from Git)
 ├── .gitignore # Ignores secrets, output, venv, etc.
 ├── requirements.txt # Python dependencies
 └── LectureNotes.pdf # Final PDF output (auto-generated)
-
+```
 
 ---
 
@@ -37,34 +37,56 @@ Perfect for converting structured lecture notes from a GitHub repo into a clean,
 ```bash
 git clone https://github.com/priyanshu8346/github-notes-to-pdf.git
 cd github-notes-to-pdf
+```
 
-##Use pip to install all required packages:
+### 2. Install required Python packages
 
+```bash
 pip install -r requirements.txt
-⚠️ WeasyPrint may need extra system libraries: brew install cairo pango gdk-pixbuf libffi (for macOS)
+```
 
-##Create a .env file
-This file holds your token and settings. Create a file named .env and add the following:
+> ⚠️ **Note:** WeasyPrint may require extra system libraries on macOS. Install them with:
+>
+> ```bash
+> brew install cairo pango gdk-pixbuf libffi
+> ```
 
+### 3. Create a `.env` file
+
+This file holds your token and settings. Create a file named `.env` in the project root and add the following:
+
+```
 GITHUB_TOKEN=your_personal_access_token
-GITHUB_OWNER=Username
-GITHUB_REPO=repo_name
-GITHUB_BRANCH=branch name
-FOLDERS=all the folders name you want to download
+GITHUB_OWNER=your_github_username
+GITHUB_REPO=your_repo_name
+GITHUB_BRANCH=branch_name
+FOLDERS=folder1,folder2,folder3
+```
 
-🔐 You can generate your token from: https://github.com/settings/tokens
-You don’t need to enable any scopes — default permissions are enough for public repos.
+- 🔐 You can generate your token at: https://github.com/settings/tokens  
+  (No extra scopes needed for public repos.)
 
-##Run the Script
+### 4. Run the script
+
 Once everything is configured, run:
 
+```bash
 python notes_to_pdf.py
-If everything runs correctly, you'll see:
+```
 
+If everything runs correctly, you'll see output like:
 
+```
 📁 Processing folder: 08. Intro to OOP
 ✔️ Downloading 08. Intro to OOP/01. Introduction.md
 ...
 📄 PDF saved as: LectureNotes.pdf
+```
+
+---
+
+## 👤 Author
+**Priyanshu Agrawal**  
+[LinkedIn: priyanshu-agrawal-124312215](https://www.linkedin.com/in/priyanshu-agrawal-124312215/)
 
 
