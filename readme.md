@@ -1,6 +1,11 @@
+
+
+markdown
+Copy
+Edit
 # 📝 GitHub Lecture Notes to PDF Converter
 
-This Python script automates the process of downloading notes (Markdown, C++, text files) from specific folders in a public GitHub repository and combines them into a single, well-formatted, syntax-highlighted PDF file.
+This Python script automates the process of downloading notes (`.md`, `.cpp`, `.txt` files) from specific folders in a public GitHub repository and combines them into a single, well-formatted, syntax-highlighted PDF file.
 
 Perfect for converting structured lecture notes from a GitHub repo into a clean, printable offline PDF — especially when notes are spread across multiple folders and file types.
 
@@ -27,6 +32,9 @@ Perfect for converting structured lecture notes from a GitHub repo into a clean,
 ├── requirements.txt # Python dependencies
 └── LectureNotes.pdf # Final PDF output (auto-generated)
 
+yaml
+Copy
+Edit
 
 ---
 
@@ -37,34 +45,57 @@ Perfect for converting structured lecture notes from a GitHub repo into a clean,
 ```bash
 git clone https://github.com/priyanshu8346/github-notes-to-pdf.git
 cd github-notes-to-pdf
-
-##Use pip to install all required packages:
-
+2. Install dependencies
+bash
+Copy
+Edit
 pip install -r requirements.txt
-⚠️ WeasyPrint may need extra system libraries: brew install cairo pango gdk-pixbuf libffi (for macOS)
+⚠️ Note for macOS:
+WeasyPrint requires system libraries. Install them using:
 
-##Create a .env file
-This file holds your token and settings. Create a file named .env and add the following:
+bash
+Copy
+Edit
+brew install cairo pango gdk-pixbuf libffi
+3. Create a .env file
+Create a file named .env and add the following configuration:
 
+env
+Copy
+Edit
 GITHUB_TOKEN=your_personal_access_token
 GITHUB_OWNER=Username
 GITHUB_REPO=repo_name
-GITHUB_BRANCH=branch name
-FOLDERS=all the folders name you want to download
+GITHUB_BRANCH=branch_name
+FOLDERS=08. Intro to OOP,09. Operator Overloading,...
+🔐 You can generate your token here: https://github.com/settings/tokens
+No scopes are needed — default permissions are enough for public repos.
 
-🔐 You can generate your token from: https://github.com/settings/tokens
-You don’t need to enable any scopes — default permissions are enough for public repos.
+4. Run the script
+bash
+Copy
+Edit
+python app.py
+You’ll see output like:
 
-##Run the Script
-Once everything is configured, run:
-
-python notes_to_pdf.py
-If everything runs correctly, you'll see:
-
-
+vbnet
+Copy
+Edit
 📁 Processing folder: 08. Intro to OOP
 ✔️ Downloading 08. Intro to OOP/01. Introduction.md
 ...
 📄 PDF saved as: LectureNotes.pdf
+🛡️ Security Tip
+Ensure your .env file is excluded in .gitignore:
 
-
+gitignore
+Copy
+Edit
+.env
+LectureNotes.pdf
+venv/
+__pycache__/
+🙌 Author
+Priyanshu Agrawal
+📧 Connect on LinkedIn
+💻 GitHub Profile
